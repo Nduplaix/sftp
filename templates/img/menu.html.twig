@@ -1,0 +1,10 @@
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Images
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for file in files %}
+                <a class="dropdown-item" href="{{ url('img_download', {'imgName' : file}) }}">{{ file }}</a>
+            {% endfor %}
+        </div>
+</li>
