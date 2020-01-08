@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    {{ form(formImage) }}
+    {{ form_start(form) }}
+    {% for image in form.images %}
+        <li>
+            {{ form_errors(image) }}
+            {{ form_widget(image) }}
+            <a class="alert alert-danger" href="{{ url('image_delete', {'name' : image.vars.value}) }}">X</a>
+        </li>
+    {% endfor %}
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

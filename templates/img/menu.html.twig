@@ -4,7 +4,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for file in files %}
-                <a class="dropdown-item" href="{{ url('img_download', {'imgName' : file}) }}">{{ file }}</a>
+                <a class="dropdown-item" href="{{ url('img_download', {'imgName' : file}) }}">{{ file }}</a> <a class="alert alert-danger" href="{{ url('image_delete', {'name' : file}) }}">X</a>
             {% endfor %}
         </div>
 </li>
